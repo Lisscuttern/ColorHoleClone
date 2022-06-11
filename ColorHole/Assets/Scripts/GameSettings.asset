@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: GameSettings
   m_EditorClassIdentifier: 
   Distance: 1
-  FallForce: 5
+  FallForce: 10
