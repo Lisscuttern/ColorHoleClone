@@ -15,8 +15,8 @@ GameObject:
   - component: {fileID: 7206735383598935174}
   - component: {fileID: 7206735383598935175}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Cube
+  m_Name: CollectableCubes
+  m_TagString: CollectableCube
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -64,7 +64,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 29bb16c53078c4760ba1e6b4b0f715ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -111,11 +111,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e70bffb545143426baef63322a9c3bb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_holeComponent: {fileID: 0}
   m_transform: {fileID: 0}
-  m_hole: {fileID: 0}
   m_rb: {fileID: 7206735383598935175}
   m_gameSettings: {fileID: 11400000, guid: bbd48e4b0060347408706f10d5355351, type: 2}
+  m_levelManager: {fileID: 0}
 --- !u!54 &7206735383598935175
 Rigidbody:
   m_ObjectHideFlags: 0

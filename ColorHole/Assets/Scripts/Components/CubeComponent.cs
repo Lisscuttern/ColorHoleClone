@@ -8,6 +8,7 @@ public class CubeComponent : MonoBehaviour
     [SerializeField] private Transform m_transform;
     [SerializeField] private Rigidbody m_rb;
     [SerializeField] private GameSettings m_gameSettings;
+    [SerializeField] private LevelManager m_levelManager;
 
     private void FixedUpdate()
     {
@@ -20,6 +21,7 @@ public class CubeComponent : MonoBehaviour
         {
             transform.DOJump(new Vector3(m_transform.position.x, m_transform.position.y, m_transform.position.z),1,1,0.5f).OnComplete(()=>
             {
+                m_levelManager.LevelProgress();
                 Destroy(gameObject);
             });
         }
