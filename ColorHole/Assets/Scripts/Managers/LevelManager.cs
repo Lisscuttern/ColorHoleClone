@@ -17,6 +17,8 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private GameObject m_gate;
     [SerializeField] private CinemachineVirtualCamera m_cinemachineVirtualCamera;
     [SerializeField] private List<GameObject> m_wrongCubesFirstStage = new List<GameObject>();
+    [SerializeField] private GameObject m_LevelCompletePanel;
+    [SerializeField] private GameObject m_GameOverPanel;
 
     #endregion
 
