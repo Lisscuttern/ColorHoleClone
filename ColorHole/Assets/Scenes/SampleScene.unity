@@ -257,10 +257,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b8cc1a5aceb0483ba2a18b9d2cfb118, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xClamp: 4.3
-  zClamp: 4.2
   mainCamera: {fileID: 963194227}
   m_levelManager: {fileID: 919820287}
+  m_level: {fileID: 11400000, guid: 94327277393344b65bb200d081b00020, type: 2}
 --- !u!135 &21477417
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -991,7 +990,7 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 36
   m_WholeNumbers: 0
-  m_Value: 18
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -1119,6 +1118,7 @@ MonoBehaviour:
   m_sliderFirstStage: {fileID: 711795958}
   m_sliderSecondStage: {fileID: 426786854}
   m_gate: {fileID: 210857593}
+  m_cinemachineVirtualCamera: {fileID: 2063431497}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0

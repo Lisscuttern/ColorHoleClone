@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using Cinemachine;
 
 public class LevelManager : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Slider m_sliderFirstStage;
     [SerializeField] private Slider m_sliderSecondStage;
     [SerializeField] private GameObject m_gate;
+    [SerializeField] private CinemachineVirtualCamera m_cinemachineVirtualCamera;
 
     #endregion
 
@@ -90,6 +92,7 @@ public class LevelManager : MonoBehaviour
                         secondStageControl = false;
                         stageComplete = true;
                     });
+                m_cinemachineVirtualCamera.transform.DOMoveZ(12, 3f);
             });
         }
     }
@@ -106,5 +109,10 @@ public class LevelManager : MonoBehaviour
     public bool GetSecondStageControl()
     {
         return secondStageControl;
+    }
+
+    public bool GetStageComplete()
+    {
+        return stageComplete;
     }
 }

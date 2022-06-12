@@ -26,8 +26,8 @@ public class CubeComponent : MonoBehaviour
         {
             transform.DOJump(new Vector3(m_transform.position.x, m_transform.position.y, m_transform.position.z),1,1,0.5f).OnComplete(()=>
             {
-                m_levelManager.LevelProgress();
                 Destroy(gameObject);
+                m_levelManager.LevelProgress();
             });
         }
     }

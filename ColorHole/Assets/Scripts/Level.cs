@@ -7,5 +7,14 @@ public class Level : ScriptableObject
     [Header("Level Variables")] 
     public int FirstStageValue;
     public int SecondStageValue;
+
+    [Header("Level Movement Limit")]
+    public float FirstStageXLimit;
+    public float FirstStageZLimit;
+    
+    public float SecondStageMinZLimit;
+    public float SecondStageMaxZLimit;
+
+
     
 }

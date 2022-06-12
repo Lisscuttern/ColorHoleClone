@@ -6,12 +6,11 @@ public class HoleComponent : MonoBehaviour
 {
     #region SerializeFields
     
-    [Header("Movement Limits")] 
-    [SerializeField] private float xClamp;
-    [SerializeField] private float zClamp;
+
     [SerializeField] Camera mainCamera;
 
     [SerializeField] private LevelManager m_levelManager;
+    [SerializeField] private Level m_level;
     #endregion
     
     #region Private Fields
@@ -56,10 +55,21 @@ public class HoleComponent : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {
-            transform.position = new Vector3(
-                Mathf.Clamp(GetMouseWorldPos().x + _mOffset.x, -xClamp, xClamp),
-                -1.98f,
-                Mathf.Clamp(GetMouseWorldPos().z + _mOffset.z, -zClamp, zClamp));
+            if (m_levelManager.GetStageComplete())
+            {
+                transform.position = new Vector3(
+                    Mathf.Clamp(GetMouseWorldPos().x + _mOffset.x, -m_level.FirstStageXLimit, m_level.FirstStageXLimit),
+                    -1.98f,
+                    Mathf.Clamp(GetMouseWorldPos().z + _mOffset.z, m_level.SecondStageMinZLimit, m_level.SecondStageMaxZLimit));
+            }
+            else
+            {
+                transform.position = new Vector3(
+                    Mathf.Clamp(GetMouseWorldPos().x + _mOffset.x, -m_level.FirstStageXLimit, m_level.FirstStageXLimit),
+                    -1.98f,
+                    Mathf.Clamp(GetMouseWorldPos().z + _mOffset.z, -m_level.FirstStageZLimit, m_level.FirstStageZLimit));
+            }
+            
         }
     }
 }
