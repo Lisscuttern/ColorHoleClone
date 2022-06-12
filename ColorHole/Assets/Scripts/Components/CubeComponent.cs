@@ -29,6 +29,16 @@ public class CubeComponent : MonoBehaviour
                 Destroy(gameObject);
                 m_levelManager.LevelProgress();
             });
+
+            if (this.gameObject.tag == CommonTypes.TAG_WRONG_CUBE)
+            {
+                
+                transform.DOJump(new Vector3(m_transform.position.x, m_transform.position.y, m_transform.position.z),1,1,0.5f).OnComplete(()=>
+                {
+                    Destroy(gameObject);
+                    m_levelManager.GameOver();
+                });
+            }
         }
     }
 
@@ -43,7 +53,6 @@ public class CubeComponent : MonoBehaviour
         
         if (Vector3.Distance(holeCenterPoint, transform.position) < m_gameSettings.Distance)
         {
-            Debug.Log(Vector3.Distance(holeCenterPoint,transform.position));
             m_rb.AddForce(m_gameSettings.FallForce * direction, ForceMode.Force);
         }
     }

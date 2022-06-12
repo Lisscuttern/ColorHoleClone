@@ -7,6 +7,7 @@ TagManager:
   - Cube
   - Hole
   - CollectableCube
+  - WrongCube
   layers:
   - Default
   - TransparentFX

@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
@@ -15,6 +16,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Slider m_sliderSecondStage;
     [SerializeField] private GameObject m_gate;
     [SerializeField] private CinemachineVirtualCamera m_cinemachineVirtualCamera;
+    [SerializeField] private List<GameObject> m_wrongCubesFirstStage = new List<GameObject>();
 
     #endregion
 
@@ -59,6 +61,25 @@ public class LevelManager : MonoBehaviour
     }
 
     /// <summary>
+    /// This function control level complete or not
+    /// </summary>
+    public void LevelEndControl()
+    {
+        if (m_sliderSecondStage.value <= secondStageValue)
+        {
+            //Level Complete
+        }
+    }
+
+    /// <summary>
+    /// This function control game is over or not
+    /// </summary>
+    public void GameOver()
+    {
+        //Game Over
+    }
+
+    /// <summary>
     /// This function open the corridor gate 
     /// </summary>
     private void OpenGate()
@@ -80,8 +101,14 @@ public class LevelManager : MonoBehaviour
         if (stageComplete)
             return;
         
+        
         Invoke("MakeSecondStageControlTrue",0.8f);
 
+        for (int i = 0; i < m_wrongCubesFirstStage.Count; i++)
+        {
+            m_wrongCubesFirstStage[i].gameObject.SetActive(false);
+        }
+        
         if (secondStageControl)
         {
             m_holeGameObject.transform.DOMoveX(0, 2f).OnComplete(() =>

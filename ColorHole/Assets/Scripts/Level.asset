@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Level
   m_EditorClassIdentifier: 
   FirstStageValue: 36
-  SecondStageValue: 0
+  SecondStageValue: 24
   FirstStageXLimit: 4.2
   FirstStageZLimit: 4.3
   SecondStageMinZLimit: 16
