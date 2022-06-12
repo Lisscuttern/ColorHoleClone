@@ -5,4 +5,9 @@ public class GameSettings : ScriptableObject
 {
     public float Distance;
     public float FallForce;
+
+    [Header("Gate")]
+    public float GateEndPosY;
+
+    public float GateMoveDuration;
 }

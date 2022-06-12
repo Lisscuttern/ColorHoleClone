@@ -10,6 +10,8 @@ public class HoleComponent : MonoBehaviour
     [SerializeField] private float xClamp;
     [SerializeField] private float zClamp;
     [SerializeField] Camera mainCamera;
+
+    [SerializeField] private LevelManager m_levelManager;
     #endregion
     
     #region Private Fields
@@ -43,6 +45,8 @@ public class HoleComponent : MonoBehaviour
     /// </summary>
     private void Movement()
     {
+        if (m_levelManager.GetSecondStageControl())
+            return;
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 currentPosition = gameObject.transform.position;

@@ -5,10 +5,15 @@ using MyNameSpace;
 
 public class CubeComponent : MonoBehaviour
 {
+    #region Serialize Fields
+
     [SerializeField] private Transform m_transform;
     [SerializeField] private Rigidbody m_rb;
     [SerializeField] private GameSettings m_gameSettings;
     [SerializeField] private LevelManager m_levelManager;
+
+    #endregion
+    
 
     private void FixedUpdate()
     {

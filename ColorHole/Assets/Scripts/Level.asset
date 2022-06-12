@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirstStageValue: 36
   SecondStageValue: 0
+  SliderFirstStage: {fileID: 7234477046458216926, guid: 24497d6972e044db5a72d3c94d657bc1, type: 3}
+  SliderSecondStage: {fileID: 7418843392528796406, guid: a20f17bcea62a472089552c8f0ac8152, type: 3}
+  Gate: {fileID: 5908821519603461734, guid: b1334fb7c551d49228e65fd56005c072, type: 3}

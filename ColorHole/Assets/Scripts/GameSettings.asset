@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2408dd71b4a8e4ea59f7a8fd5d62d638, type: 3}
   m_Name: GameSettings
   m_EditorClassIdentifier: 
-  Distance: 1
-  FallForce: 10
+  Distance: 1.5
+  FallForce: 8
+  GateEndPosY: -0.61
+  GateMoveDuration: 3
