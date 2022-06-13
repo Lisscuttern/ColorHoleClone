@@ -46,6 +46,10 @@ public class HoleComponent : MonoBehaviour
     {
         if (m_levelManager.GetSecondStageControl())
             return;
+
+        if (m_levelManager.GetGameEndCheck())
+            return;
+        
         if (Input.GetMouseButtonDown(0))
         {
             Vector3 currentPosition = gameObject.transform.position;

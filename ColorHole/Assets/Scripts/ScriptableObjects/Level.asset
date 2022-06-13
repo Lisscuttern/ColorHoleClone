@@ -18,3 +18,4 @@ MonoBehaviour:
   FirstStageZLimit: 4.3
   SecondStageMinZLimit: 16
   SecondStageMaxZLimit: 24
+  Prefab: {fileID: 7104790841857744867, guid: 6a22ca32b3c10467697953a06af2e25b, type: 3}

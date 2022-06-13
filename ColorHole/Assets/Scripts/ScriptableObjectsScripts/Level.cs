@@ -14,6 +14,9 @@ public class Level : ScriptableObject
     
     public float SecondStageMinZLimit;
     public float SecondStageMaxZLimit;
+    
+    [Header("Level Game Object")]
+    public GameObject Prefab;
 
 
     

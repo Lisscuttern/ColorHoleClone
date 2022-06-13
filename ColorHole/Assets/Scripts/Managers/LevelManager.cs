@@ -29,6 +29,8 @@ public class LevelManager : MonoBehaviour
     private bool secondStageControl;
     private bool stageComplete;
 
+    private bool gameEndCheck;
+
     #endregion
 
 
@@ -44,6 +46,7 @@ public class LevelManager : MonoBehaviour
     {
         OpenGate();
         MoveSecondStage();
+        LevelEndControl();
     }
 
     /// <summary>
@@ -67,9 +70,10 @@ public class LevelManager : MonoBehaviour
     /// </summary>
     public void LevelEndControl()
     {
-        if (m_sliderSecondStage.value <= secondStageValue)
+        if (m_sliderSecondStage.value >= secondStageValue)
         {
-            //Level Complete
+            gameEndCheck = true;
+            m_LevelCompletePanel.gameObject.SetActive(true);
         }
     }
 
@@ -78,7 +82,8 @@ public class LevelManager : MonoBehaviour
     /// </summary>
     public void GameOver()
     {
-        //Game Over
+        gameEndCheck = true;
+        m_GameOverPanel.gameObject.SetActive(true);
     }
 
     /// <summary>
@@ -140,8 +145,21 @@ public class LevelManager : MonoBehaviour
         return secondStageControl;
     }
 
+    /// <summary>
+    /// This function return stage is complete or not
+    /// </summary>
+    /// <returns>stageComplete</returns>
     public bool GetStageComplete()
     {
         return stageComplete;
+    }
+
+    /// <summary>
+    /// This function return game is end or not
+    /// </summary>
+    /// <returns>gameEndCheck</returns>
+    public bool GetGameEndCheck()
+    {
+        return gameEndCheck;
     }
 }

@@ -16,3 +16,6 @@ MonoBehaviour:
   FallForce: 8
   GateEndPosY: -0.61
   GateMoveDuration: 3
+  Levels:
+  - {fileID: 11400000, guid: 94327277393344b65bb200d081b00020, type: 2}
+  - {fileID: 11400000, guid: e9b66854124264bd0979464164fb5160, type: 2}

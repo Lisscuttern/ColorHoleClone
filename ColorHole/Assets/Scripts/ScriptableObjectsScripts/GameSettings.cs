@@ -10,4 +10,7 @@ public class GameSettings : ScriptableObject
     public float GateEndPosY;
 
     public float GateMoveDuration;
+    
+    [Header("Level")]
+    public Level[] Levels;
 }

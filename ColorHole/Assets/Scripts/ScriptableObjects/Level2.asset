@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e7ba32ad472a453ca5a6ac2bcbf36ce, type: 3}
+  m_Name: Level2
+  m_EditorClassIdentifier: 
+  FirstStageValue: 36
+  SecondStageValue: 24
+  FirstStageXLimit: 4.2
+  FirstStageZLimit: 4.3
+  SecondStageMinZLimit: 16
+  SecondStageMaxZLimit: 24
+  Prefab: {fileID: 6755834440809156163, guid: 0a5fec845447b4fd38ed72c73b3549cb, type: 3}
