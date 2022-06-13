@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using Cinemachine;
+using TMPro;
 
 public class LevelManager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private List<GameObject> m_wrongCubesFirstStage = new List<GameObject>();
     [SerializeField] private GameObject m_LevelCompletePanel;
     [SerializeField] private GameObject m_GameOverPanel;
+    [SerializeField] private GameObject m_SecondStageGoText;
 
     #endregion
 
@@ -47,6 +49,7 @@ public class LevelManager : MonoBehaviour
         OpenGate();
         MoveSecondStage();
         LevelEndControl();
+        
     }
 
     /// <summary>
@@ -126,7 +129,7 @@ public class LevelManager : MonoBehaviour
                         secondStageControl = false;
                         stageComplete = true;
                     });
-                m_cinemachineVirtualCamera.transform.DOMoveZ(m_gameSettings.CameraEndValueZ, 3f);
+                m_cinemachineVirtualCamera.transform.DOMoveZ(m_gameSettings.CameraEndValueZ, 1.5f);
             });
         }
     }

@@ -23,7 +23,7 @@ public class CubeComponent : MonoBehaviour
     {
         if (other.gameObject.tag == CommonTypes.TAG_HOLE)
         {
-            transform.DOJump(new Vector3(m_transform.position.x, m_transform.position.y, m_transform.position.z),1,1,0.5f).OnComplete(()=>
+            transform.DOJump(new Vector3(m_transform.position.x, m_transform.position.y, m_transform.position.z),1,1,1f).OnComplete(()=>
             {
                 Destroy(gameObject);
                 m_levelManager.LevelProgress();
@@ -32,7 +32,7 @@ public class CubeComponent : MonoBehaviour
             if (this.gameObject.tag == CommonTypes.TAG_WRONG_CUBE)
             {
                 
-                transform.DOJump(new Vector3(m_transform.position.x, m_transform.position.y, m_transform.position.z),1,1,0.5f).OnComplete(()=>
+                transform.DOJump(new Vector3(m_transform.position.x, m_transform.position.y-1, m_transform.position.z),1,1,0.5f).OnComplete(()=>
                 {
                     Destroy(gameObject);
                     m_levelManager.GameOver();

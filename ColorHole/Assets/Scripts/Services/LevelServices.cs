@@ -11,7 +11,7 @@ public class LevelServices : MonoBehaviour
 
     #region Private Fields
 
-    private int levelNumber;
+    public int levelNumber;
 
     #endregion
 
@@ -30,7 +30,7 @@ public class LevelServices : MonoBehaviour
     }
 
     /// <summary>
-    /// This function help for gettin next level
+    /// This function help for getting next level
     /// </summary>
     public void NextLevel()
     {
@@ -39,6 +39,17 @@ public class LevelServices : MonoBehaviour
 
         levelNumber++;
         PlayerPrefs.SetInt("LevelNumber", levelNumber);
+        InitializeLevel();
+        LoadLevel();
+    }
+    
+    /// <summary>
+    /// this function help for play again the same level
+    /// </summary>
+    public void TryLevel()
+    {
+        if (levelNumber >= m_gameSettings.Levels.Length - 1)
+            return;
         InitializeLevel();
         LoadLevel();
     }
