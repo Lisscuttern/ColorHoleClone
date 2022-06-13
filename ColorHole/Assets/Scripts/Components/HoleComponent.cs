@@ -1,16 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class HoleComponent : MonoBehaviour
 {
     #region SerializeFields
     
-
     [SerializeField] Camera mainCamera;
-
     [SerializeField] private LevelManager m_levelManager;
     [SerializeField] private Level m_level;
+    
     #endregion
     
     #region Private Fields

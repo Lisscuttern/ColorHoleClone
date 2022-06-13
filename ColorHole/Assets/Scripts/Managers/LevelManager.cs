@@ -7,10 +7,8 @@ using Cinemachine;
 public class LevelManager : MonoBehaviour
 {
     #region SerializeFields
-
     
     [SerializeField] private GameSettings m_gameSettings;
-    [SerializeField] private Level m_level;
     [SerializeField] private GameObject m_holeGameObject;
     [SerializeField] private Slider m_sliderFirstStage;
     [SerializeField] private Slider m_sliderSecondStage;
@@ -28,16 +26,18 @@ public class LevelManager : MonoBehaviour
     private int secondStageValue;
     private bool secondStageControl;
     private bool stageComplete;
-
     private bool gameEndCheck;
 
     #endregion
 
+     
+    
 
     private void Start()
     {
-        firstStageValue = m_level.FirstStageValue;
-        secondStageValue = m_level.SecondStageValue;
+        Level level = m_gameSettings.Levels[PlayerPrefs.GetInt("LevelNumber")];
+        firstStageValue = level.FirstStageValue;
+        secondStageValue = level.SecondStageValue;
         m_sliderFirstStage.maxValue = firstStageValue;
         m_sliderSecondStage.maxValue = secondStageValue;
     }
@@ -126,7 +126,7 @@ public class LevelManager : MonoBehaviour
                         secondStageControl = false;
                         stageComplete = true;
                     });
-                m_cinemachineVirtualCamera.transform.DOMoveZ(12, 3f);
+                m_cinemachineVirtualCamera.transform.DOMoveZ(m_gameSettings.CameraEndValueZ, 3f);
             });
         }
     }

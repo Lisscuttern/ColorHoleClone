@@ -10,7 +10,12 @@ public class GameSettings : ScriptableObject
     public float GateEndPosY;
 
     public float GateMoveDuration;
+
+    [Header("Camera")]
+    public float CameraEndValueZ;
     
     [Header("Level")]
     public Level[] Levels;
+    
+    
 }

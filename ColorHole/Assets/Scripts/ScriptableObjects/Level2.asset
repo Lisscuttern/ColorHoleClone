@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e7ba32ad472a453ca5a6ac2bcbf36ce, type: 3}
   m_Name: Level2
   m_EditorClassIdentifier: 
-  FirstStageValue: 36
-  SecondStageValue: 24
+  FirstStageValue: 24
+  SecondStageValue: 30
   FirstStageXLimit: 4.2
   FirstStageZLimit: 4.3
   SecondStageMinZLimit: 16
